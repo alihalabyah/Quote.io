@@ -1,0 +1,294 @@
+<% layout( 'layout' ) -%>
+
+<!--
+<h1 id="page-title"><%= title %></h1>
+
+<div id="list">
+  <form action="/create" method="post" accept-charset="utf-8">
+    <div class="item-new">
+      <input class="input" type="text" name="content" />
+    </div>
+  </form>
+
+<% todos.forEach( function ( todo ){ %>
+  <div class="item">
+    <a class="update-link" href="/edit/<%= todo._id %>" title="Update this todo item"><%= todo.content %></a>
+    <a class="del-btn" href="/destroy/<%= todo._id %>" title="Delete this todo item">Delete</a>
+  </div>
+<% }); %>
+</div>-->
+
+<div class="container show" id="page-1">
+
+	<header class="codrops-header">
+		<h1>Quote.io <span>An easy way to create invoices online!</span></h1>
+	</header>
+
+
+	<div class="morph-button morph-button-inflow morph-button-inflow-1">
+		<button type="button" class="show-form"><span>Create your invoice now!</span></button>
+		<div class="morph-content">
+			<div>
+				<div class="content-style-form content-style-form-4">
+					<h2 class="morph-clone">Create your invoice now!</h2>
+					<form id="emailForm">
+						<p><label>Your Email Address</label><input id="email" type="text"/><span>We promise, we won't send you any spam. Just love.</span></p>
+						<p><button onclick="saveEmail();">Create</button></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div><!-- morph-button -->
+
+	<script src="js/classie.js"></script>
+	<script src="js/uiMorphingButton_inflow.js"></script>
+	<script>
+		(function() {
+			new UIMorphingButton( document.querySelector( '.morph-button' ) );
+
+				// for demo purposes only
+				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+				} );
+			})();
+		</script>
+
+		<section class="columns clearfix">
+
+          <!-- <div class="column">
+            <p>To start the page loading animation, click the following link:</p>
+            <p><a class="pageload-link" href="#page-2">Show Page Loader</a></p>
+        </div> -->
+    </section>
+
+</div><!-- /container -->
+
+<!-- The new page dummy; this would be dynamically loaded content -->
+<div class="container" id="page-2">
+
+
+
+	<header>
+				<h1>Sticky Table Headers <em>Revisited</em> <span>Creating functional and flexible sticky table headers</span></h1>	
+				<nav class="codrops-demos">
+					<a class="current-demo" href="index.html" title="Basic Usage">Basic Usage</a>
+					<a href="index2.html" title="Biaxial Headers">Biaxial Headers</a>
+					<a href="index3.html" title="Wide Tables">Wide Tables</a>
+				</nav>
+			</header>
+			<div class="component">
+				<h2>Basic usage</h2>
+				<p>This is a basic usage example. Scroll down to see the sticky table header in action. And of course, multiple instances are supported. Tables are pre-populated with random user data retrieved from the <a href="http://randomuser.me/" title="Random User Generator">Random User Generator</a>.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th>Mobile</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td class="user-name">gary coleman</td><td class="user-email">gary.coleman21@example.com</td><td class="user-phone">(398)-332-5385</td><td class="user-mobile">(888)-677-3719</td></tr>
+						<tr><td class="user-name">rose parker</td><td class="user-email">rose.parker16@example.com</td><td class="user-phone">(293)-873-2247</td><td class="user-mobile">(216)-889-4933</td></tr>
+						<tr><td class="user-name">chloe nelson</td><td class="user-email">chloe.nelson18@example.com</td><td class="user-phone">(957)-213-3499</td><td class="user-mobile">(207)-516-4474</td></tr>
+						
+					</tbody>
+				</table>
+				
+			</div>
+
+
+	<!-- Top Navigation -->
+	<!-- <div class="codrops-top clearfix">
+		<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/CircularProgressButton/"><span>Previous Demo</span></a>
+		<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=18880"><span>Back to the Codrops Article</span></a></span>
+	</div>
+	<section>
+		<h2>This is an example for a new page.</h2>
+		<p><a class="pageload-link" href="#page-1">Go back</a></p>
+	</section> -->
+</div><!-- /container -->
+
+<div id="loader" class="pageload-overlay" data-opening="M20,15 50,30 50,30 30,30 Z;M0,0 80,0 50,30 20,45 Z;M0,0 80,0 60,45 0,60 Z;M0,0 80,0 80,60 0,60 Z" data-closing="M0,0 80,0 60,45 0,60 Z;M0,0 80,0 50,30 20,45 Z;M20,15 50,30 50,30 30,30 Z;M30,30 50,30 50,30 30,30 Z">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+		<path d="M30,30 50,30 50,30 30,30 Z"/>
+	</svg>
+</div><!-- /pageload-overlay -->
+
+
+
+      <!-- <div class="morph-button morph-button-sidebar morph-button-fixed">
+			<button type="button"><span class="icon icon-cog">Settings Menu</span></button>
+			<div class="morph-content">
+				<div>
+					<div class="content-style-sidebar">
+						<span class="icon icon-close">Close the overlay</span>
+						<h2 class="icon icon-lab">Settings</h2>
+						<ul>
+							<li><a class="icon icon-camera" href="#">Default filters</a></li>
+							<li><a class="icon icon-server" href="#">Storage Use</a></li>
+							<li><a class="icon icon-heart" href="#">Favorites</a></li>
+							<li><a class="icon icon-zoom-in" href="#">Readability</a></li>
+							<li><a class="icon icon-microphone" href="#">Speech</a></li>
+							<li><a class="icon icon-cloud" href="#">Uploads</a></li>
+							<li><a class="icon icon-user" href="#">Profile</a></li>
+							<li><a class="icon icon-briefcase" href="#">Documents</a></li>
+							<li><a class="icon icon-globe" href="#">Global Options</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> --><!-- morph-button -->
+
+		<script src="js/classie.js"></script>
+		<script src="js/svgLoader.js"></script>
+		<script src="js/uiMorphingButton_fixed.js"></script>
+		<script>
+
+			var pageWrap = document.getElementById( 'pagewrap' ),
+			pages = [].slice.call( pageWrap.querySelectorAll( 'div.container' ) ),
+			currentPage = 0,
+			triggerLoading = [].slice.call( pageWrap.querySelectorAll( 'a.pageload-link' ) ),
+			loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
+
+			function init() {
+				triggerLoading.forEach( function( trigger ) {
+					trigger.addEventListener( 'click', function( ev ) {
+						ev.preventDefault();
+						loader.show();
+              // after some time hide loader
+              setTimeout( function() {
+              	loader.hide();
+
+              	classie.removeClass( pages[ currentPage ], 'show' );
+                // update..
+                currentPage = currentPage ? 0 : 1;
+                classie.addClass( pages[ currentPage ], 'show' );
+
+            }, 2000 );
+          } );
+				} );  
+			}
+
+			function showCreateInvoiceForm() {
+				loader.show();
+              // after some time hide loader
+              setTimeout( function() {
+              	loader.hide();
+
+              	classie.removeClass( pages[ currentPage ], 'show' );
+                // update..
+                currentPage = currentPage ? 0 : 1;
+                classie.addClass( pages[ currentPage ], 'show' );
+
+            }, 2000 );
+          }
+
+          function saveEmail() {
+
+        	// var data = $('#emailForm').serialize();
+
+        	var email = $('#email').val();
+
+        	if(!validateEmail(email)) return false;
+
+        	// var request = $.ajax({
+        	// 	url: "/addEmail",
+        	// 	type: "POST",
+        	// 	data: { email_address : email },
+        	// 	dataType: "JSON"
+        	// });
+
+        	// request.done(function( data ) {
+        		
+        	// });
+
+        	// request.fail(function( jqXHR, textStatus ) {
+        	// 	// alert( "Request failed: " + textStatus );
+        	// });
+
+        	showCreateInvoiceForm();
+        }
+
+        function validateEmail(email) { 
+        	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        	return re.test(email);
+        } 
+
+        init();
+
+        var docElem = window.document.documentElement, didScroll, scrollPosition,
+        container = document.getElementById( 'pagewrap' );
+
+        // trick to prevent scrolling when opening/closing button
+        function noScrollFn() {
+        	window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+        }
+
+        function noScroll() {
+        	window.removeEventListener( 'scroll', scrollHandler );
+        	window.addEventListener( 'scroll', noScrollFn );
+        }
+
+        function scrollFn() {
+        	window.addEventListener( 'scroll', scrollHandler );
+        }
+
+        function canScroll() {
+        	window.removeEventListener( 'scroll', noScrollFn );
+        	scrollFn();
+        }
+
+        function scrollHandler() {
+        	if( !didScroll ) {
+        		didScroll = true;
+        		setTimeout( function() { scrollPage(); }, 60 );
+        	}
+        };
+
+        function scrollPage() {
+        	scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+        	didScroll = false;
+        };
+
+        scrollFn();
+        
+        // var el = document.querySelector( '.morph-button' );
+        
+        // new UIMorphingButton( el, {
+        //   closeEl : '.icon-close',
+        //   onBeforeOpen : function() {
+        //     // don't allow to scroll
+        //     noScroll();
+        //     // push main container
+        //     classie.addClass( container, 'pushed' );
+        //   },
+        //   onAfterOpen : function() {
+        //     // can scroll again
+        //     canScroll();
+        //     // add scroll class to main el
+        //     classie.addClass( el, 'scroll' );
+        //   },
+        //   onBeforeClose : function() {
+        //     // remove scroll class from main el
+        //     classie.removeClass( el, 'scroll' );
+        //     // don't allow to scroll
+        //     noScroll();
+        //     // push back main container
+        //     classie.removeClass( container, 'pushed' );
+        //   },
+        //   onAfterClose : function() {
+        //     // can scroll again
+        //     canScroll();
+        //   }
+        // } );
+
+$(document).ready(function() {
+	$('.morph-button .show-form').trigger('click');
+});
+
+
+
+
+</script>

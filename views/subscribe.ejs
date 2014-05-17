@@ -1,0 +1,30 @@
+<% layout( 'layout' ) -%>
+
+
+<div class="morph-button morph-button-inflow morph-button-inflow-1">
+						<button type="button"><span>Subscribe to our Newsletter</span></button>
+						<div class="morph-content">
+							<div>
+								<div class="content-style-form content-style-form-4">
+									<h2 class="morph-clone">Subscribe to our Newsletter</h2>
+									<form>
+										<p><label>Your Email Address</label><input type="text"/><span>We promise, we won't send you any spam. Just love.</span></p>
+										<p><button>Subscribe me</button></p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div><!-- morph-button -->
+
+					<script src="js/classie.js"></script>
+		<script src="js/uiMorphingButton_inflow.js"></script>
+		<script>
+			(function() {
+				new UIMorphingButton( document.querySelector( '.morph-button' ) );
+
+				// for demo purposes only
+				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+				} );
+			})();
+		</script>
